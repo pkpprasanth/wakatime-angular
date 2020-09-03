@@ -1,7 +1,8 @@
 .example-form{
     position: absolute;
+    width: 70%;
     margin-top: 5% ;
-    margin-left: 40%;
+    margin-left: 18%;
     
 }
 #field{
@@ -13,5 +14,22 @@
 }
 
 #btn{
-    margin-left: 40%;
+    margin-left: 10%;
 }
+.card{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.example-card {
+
+    max-width: 80%;
+    margin: 2%;
+   
+
+
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }

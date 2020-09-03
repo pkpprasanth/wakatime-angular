@@ -40,7 +40,7 @@ export class ReportComponent implements OnInit {
               this.selected.push(this.dataSource[i])
         }
       }
-
+      console.log("hello")
   }
 
 
