@@ -1,0 +1,11 @@
+table {
+    position: absolute;
+    width: 75%;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: rgb(235, 11, 11);
+  }
+  

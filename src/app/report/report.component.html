@@ -1,0 +1,20 @@
+<form class="example-form">
+    <div class="language">
+        <mat-form-field id="field" appearance="fill">
+            <mat-label>Select Squad</mat-label>
+          <mat-select value={{selectedSquad}}>
+            <mat-option *ngFor="let option of dataSource" value="{{option.squad}}" (click)="squadnumber(option.squad)" >{{option.squad}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field id="field" appearance="fill">
+            <mat-label>Select Name</mat-label>
+          <mat-select value={{selectedname}}>
+            <mat-option *ngFor="let option1 of selected" value="{{option1.name}}" (click)="squadname(option1.name)" >{{option1.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="getreport()" id="btn">Get Report</button>
+
+      </div>
+  </form>
+
+  

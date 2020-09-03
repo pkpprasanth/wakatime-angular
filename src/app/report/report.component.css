@@ -1,0 +1,17 @@
+.example-form{
+    position: absolute;
+    margin-top: 5% ;
+    margin-left: 40%;
+    
+}
+#field{
+    margin: 4%;
+}
+
+#new{
+    margin: 20%;
+}
+
+#btn{
+    margin-left: 40%;
+}
