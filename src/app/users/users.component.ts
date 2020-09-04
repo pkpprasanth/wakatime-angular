@@ -15,7 +15,7 @@ export class UsersComponent implements OnInit {
   // dataSource: Wakatime[];
 
 wakatime : Observable<Wakatime[]>;
-  displayedColumns: string[] = ['uid', 'name', 'squad'];
+  displayedColumns: string[] = ['name', 'squad', 'uid'];
   dataSource;
   @ViewChild(MatSort) sort: MatSort;
 

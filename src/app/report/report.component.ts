@@ -1,56 +1,44 @@
 
 import {Component, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import{Wakatime} from "../wakatime";
 import{WakatimeService} from "../wakatime.service";
-import { Observable } from 'rxjs';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css']
+  styleUrls: ['./report.component.css'],
+  providers :[WakatimeService]
 })
 export class ReportComponent implements OnInit {
-  dataSource : any[];
+
   constructor(private wakatimeService :WakatimeService) { }
-
+  //store all values form db
+  userList : any[];
   selectedSquad :number = 0;
-  selected :any[]=[];
-  selectedname :string;
+  totalSquad : any;
+  selected : any[] = [];
+
   ngOnInit(): void {
-
-    this.reloadDate();
+    this.loadData();     
   }
-  reloadDate(){
+
+  loadData(){
+    let tempSquad : any[]=[];
     this.wakatimeService.getuserList().subscribe((res)=>{
-      this.dataSource=res as any[];
+      this.userList=res as any[];
+      this.userList.forEach((data) => {
+        tempSquad.push(data.squad);
+      });
+      this.totalSquad = new Set(this.reverse(tempSquad));
     });
-   
   }
 
-  squadnumber(sq: number){
-    console.log(sq);
-    this.selectedSquad=sq;
-    this.selected.length = 0;
-    for(let i=0;i<this.dataSource.length;i++)
-      {
-        if(this.selectedSquad==this.dataSource[i].squad)
-        {
-              console.log(this.dataSource[i])
-              this.selected.push(this.dataSource[i])
-        }
-      }
-      console.log("hello")
+  getSquad(id :number) : any{
+    console.log(id)
   }
-
-
-  squadname(name: string){
-    console.log(name);
-    this.selectedname=name;
+  reverse(temp : any) : any{
+    temp.sort(); 
+    temp.reverse();
+    return temp;
   }
-  getreport()
- {
-   console.log("GetReport");
- }
 }
-
