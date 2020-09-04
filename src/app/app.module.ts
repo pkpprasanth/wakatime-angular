@@ -58,6 +58,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { ReportViewComponent } from './report-view/report-view.component';
 // import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 
@@ -67,7 +68,8 @@ import {OverlayModule} from '@angular/cdk/overlay';
     MenubarComponent,
     UsersComponent,
     ReportComponent,
-    DashboardComponent
+    DashboardComponent,
+    ReportViewComponent
   ],
   imports: [
     BrowserModule,
